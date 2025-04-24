@@ -37,6 +37,7 @@ y_train_s = keras.utils.to_categorical(y_train, num_classes)
 y_test_s = keras.utils.to_categorical(y_test, num_classes)
 
 
+
 plt.imshow(x_train_s[0].reshape(28, 28), cmap="gray")
 plt.title(f"Oznaka: {y_train[0]}")
 plt.axis("off")
@@ -46,8 +47,8 @@ plt.show()
 
 model = keras.Sequential([
     layers.Flatten(input_shape=input_shape),
-    layers.Dense(128, activation='relu'),
-    layers.Dense(64, activation='relu'),
+    layers.Dense(100, activation='relu'),
+    layers.Dense(50, activation='relu'),
     layers.Dense(num_classes, activation='softmax')
 ])
 
